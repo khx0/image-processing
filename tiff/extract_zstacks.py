@@ -64,6 +64,9 @@ if __name__ == '__main__':
 	
 	    print i, tmp.shape
 	
+	    # ToDo:
+	    # uncertain about meta data handling. Here the pixel calibration meta data
+	    # got lost. 
 	    io.imsave(outname, tmp)
 	
 	
