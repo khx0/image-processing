@@ -19,18 +19,18 @@
 # More commonly (e.g. in FIJI/ImageJ) the pixel calibration is set by the reciprocal 
 # values, i.e. the pixel width (for x) is specified as value in (unit of length) / pixel
 # and the pixel height (for y) is equally specified as value in (unit of length) / pixel
-# For z-stacks, one als need information about the voxel spacing. This
+# For z-stacks, one also needs information about the voxel spacing. This is
 # here provided using a metadata dict and the value is specified as
 # value in (unit of length) / pixel.
 # The metadata dict is also used to pass along a string, specifying the physical unit 
 # of length for the pixel calibration.
-# With these options, we can set the calibration for a TIFF stack, and programs like
-# FIJI will get the right values for
+# With these options we can set the calibration for a TIFF stack. Image processing 
+# tools like FIJI will get the right values for
 # * Unit of length
 # * Pixel width
 # * Pixel height
 # * Voxel depth
-# as they can be inspected by "FIJI->Image->Properties"
+# as they can be inspected by "FIJI->Image->Properties".
 ##########################################################################################
 
 import sys
