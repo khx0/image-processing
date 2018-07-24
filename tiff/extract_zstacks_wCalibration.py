@@ -96,7 +96,7 @@ if __name__ == '__main__':
     
     ######################################################################################
     
-    with TiffFile(filename) as tif:
+    with TiffFile(os.path.join(RAWDIR, filename)) as tif:
         
         data = tif.asarray() # extract raw numpy array
         
@@ -109,7 +109,7 @@ if __name__ == '__main__':
         
         for i in range(nFrames):
             
-            outname = os.path.join(outdir, frame_name + str(i + 1).zfill(3) + '.tif')
+            outname = os.path.join(OUTDIR, framename + str(i + 1).zfill(3) + '.tif')
             
             zstack = data[i]
             
