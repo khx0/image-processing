@@ -90,9 +90,11 @@ if __name__ == '__main__':
     yResFactor = float(y_resolution[0]) / float(y_resolution[1])
 
     resolution = (xResFactor, yResFactor)
-  
+
     # set up metadata
-    metadata = {'spacing': 2.5, 'unit': 'micron'}
+    metadata = {'spacing': 2.5,\
+                'unit': 'micron',\
+                'axes': 'TZCXY'}
     
     ######################################################################################
     
@@ -114,12 +116,19 @@ if __name__ == '__main__':
             zstack = data[i]
             
             print i, zstack.shape, "writing to ->", outname
+
+            # the imsave command uses the stack order
+            # that is passed in the metadata dict
+            zstack.shape = 1, zstack.shape[0], 1, zstack.shape[1], zstack.shape[2]
             
             tifffile.imsave(outname, zstack, 
 			                imagej = True,
 			                resolution = resolution,
 			                metadata = metadata)
-			                
+
+
+
+
 
             
 
