@@ -3,8 +3,8 @@
 ##########################################################################################
 # author: Nikolas Schnellbaecher
 # contact: khx0@posteo.net
-# date: 2018-07-24
-# file: load_tiff.py
+# date: 2018-07-23
+# file: skimage_tifffile_imsave.py
 # requires scikit-image
 ##########################################################################################
 
@@ -16,6 +16,8 @@ import math
 import numpy as np
 
 from skimage import io
+import skimage
+from skimage.external import tifffile
 
 def ensure_dir(dir):
     if not os.path.exists(dir):
@@ -29,13 +31,8 @@ RAWDIR = os.path.join(BASEDIR, 'raw')
 OUTDIR = os.path.join(BASEDIR, 'out')
  
 if __name__ == '__main__':
-    
-    filename = 'path/to/myFile.tif'
-    
-    print "opening ...", filename
 
-    im = io.imread(filename)
+    # read a tiff file in and convert the input data to a numpy array
+    image = tifffile.imread('temp.tif')
     
-    print im.shape
-    
-    
+    print image.shape

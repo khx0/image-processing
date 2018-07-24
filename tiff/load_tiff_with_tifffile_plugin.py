@@ -34,7 +34,9 @@ if __name__ == '__main__':
     
     print "opening ...", filename
 
-    im = io.imread(filename)
+    print io.plugin_info("tifffile")
+
+    im = io.imread(filename, plugin = "tifffile")
     
     print im.shape
     
