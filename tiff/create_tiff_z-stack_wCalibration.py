@@ -126,12 +126,14 @@ if __name__ == '__main__':
         assert im.shape == (image_width, image_height)
         
         stack[0, i, 0, :, :] = im
-    
+
+    # the photometric keyword specifies the image colorspace
     tifffile.imsave(os.path.join(OUTDIR, outname), 
                     stack, 
 			        imagej = True,
 			        resolution = resolution,
-			        metadata = metadata)
+			        metadata = metadata,
+			        phptometric = 'minisblack')
             
         
 

@@ -57,6 +57,7 @@ if __name__ == '__main__':
         
         for filename in glob.glob(IMAGEDIR + FILETYPE):
             
+            # the photometric keyword specifies the image colorspace
             stack.save(tifffile.imread(filename), photometric = 'minisblack')
 
 
