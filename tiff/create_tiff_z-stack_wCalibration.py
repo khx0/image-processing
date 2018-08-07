@@ -132,8 +132,9 @@ if __name__ == '__main__':
                     stack, 
 			        imagej = True,
 			        resolution = resolution,
-			        metadata = metadata,
-			        phptometric = 'minisblack')
+			        metadata = metadata)
+			        # try if the photometric keyword works also here
+			        #photometric = 'minisblack')
             
         
 
