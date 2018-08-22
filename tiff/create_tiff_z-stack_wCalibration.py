@@ -34,6 +34,29 @@
 # t = time coordinate (for time lapse data)
 ##########################################################################################
 
+##########################################################################################
+# Step by step instruction
+# 1. Place this file into your working dir.
+#
+# 2. In your working dir, create a RAW directory, which contains all your *.tiff files
+#    that you wish to stack.
+#
+# 3. Make sure that all parameters (image_width, image_height, x-y-resolution, z-spacing,
+#    etc. are set according to your requirement). This also includes the stacking
+#    order. By default, this script is set to 'axes' == 'TZCXY'. Change this to
+#    your needs. When changing the stacking order, you must equally modify the
+#    stack[0, i, 0, :, :] = im 
+#    line in the code, such that the im-data is put in the right place of the 
+#    newly created stack array. It will probably create an error, if there is a
+#    shape mismatch in either of the arrays.
+# 
+# 4. Run this script by calling
+#    $python create_tiff_z-stack_wCalibration.py
+#
+# 5. The newly cerated z-stack will be created in the OUT directory and given the 
+#    outname, which you specified below.
+##########################################################################################
+
 import sys
 import time
 import datetime
