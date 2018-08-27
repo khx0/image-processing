@@ -7,6 +7,7 @@
 # file: skimage_measure_contours_of_gaussian_peaks.py
 # requires: scikit-image
 # https://scikit-image.org/
+# Tested with Python 3.7.0, matplotlib 2.2.2, skimage 0.14.0
 ##########################################################################################
 
 import sys
