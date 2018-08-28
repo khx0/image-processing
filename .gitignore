@@ -4,3 +4,6 @@
 # no slashes anywhere
 # paths will only be checked if “/“ characters are included
 .ipynb_checkpoints
+
+# exclude test png data
+*.png
