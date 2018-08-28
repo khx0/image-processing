@@ -46,7 +46,6 @@ if __name__ == '__main__':
     print("Grayscale image shape =", img_gray.shape)
     
     # binary thresholding
-    # the cv2.threshold
     ret, thresh = cv2.threshold(img_gray, 22.0, 255, 0)
     
     print("Threshold image shape =", thresh.shape)

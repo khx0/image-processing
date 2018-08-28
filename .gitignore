@@ -5,5 +5,8 @@
 # paths will only be checked if “/“ characters are included
 .ipynb_checkpoints
 
+# exclude txt raw data files
+*.txt
+
 # exclude test png data
 *.png
